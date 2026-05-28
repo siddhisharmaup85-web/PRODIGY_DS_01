@@ -1,5 +1,3 @@
-# PRODIGY_DS_01
-📊 Interactive Power BI report analyzing population trends across 266 countries (1960–2023) using World Bank dataset. Includes bar charts, histogram, line chart, and region-wise breakdown. | Prodigy InfoTech DS Internship — Task 01
 
 # PRODIGY_DS_01 — World Population Distribution
 
@@ -27,3 +25,6 @@ and over time using bar charts and histograms.
 
 ## Tools Used
 Power BI Desktop — Power Query, DAX, Map visuals, Slicers
+
+# PRODIGY_DS_01
+📊 Interactive Power BI report analyzing population trends across 266 countries (1960–2023) using World Bank dataset. Includes bar charts, histogram, line chart, and region-wise breakdown. | Prodigy InfoTech DS Internship — Task 01

@@ -72,37 +72,40 @@ The dataset contains **one row per country per year**, with columns for Country 
 ---
 
 ## 📊 Dashboard Screenshots
+![OVERALL DASHBOARD](https://raw.githubusercontent.com/siddhisharmaup85-web/PRODIGY_DS_01/main/screenshots/OVERALL_DASHBOARD.png)
+
+---
 
 ### 1️⃣ Top 10 Most Populous Countries (2023)
-![Top 10 Most Populous Countries](https://raw.githubusercontent.com/siddhisharmaup85-web/PRODIGY_DS_01/main/screenshots/top10_population.png)
+![Top 10 Most Populous Countries](https://raw.githubusercontent.com/siddhisharmaup85-web/PRODIGY_DS_01/main/screenshots/Chart1_top_10_most_populous_countries_2023.png)
 
 > Horizontal bar chart showing countries ranked by population in 2023. India leads with over **1.4 billion** people, surpassing China for the first time.
 
 ---
 
 ### 2️⃣ Population Distribution by Group (Histogram)
-![Population Distribution by Group](https://raw.githubusercontent.com/siddhisharmaup85-web/PRODIGY_DS_01/main/screenshots/population_groups.png)
+![Population Distribution by Group](https://raw.githubusercontent.com/siddhisharmaup85-web/PRODIGY_DS_01/main/screenshots/Chart3_count_of_country_name_by_population_group.png)
 
 > Countries are grouped into population buckets (Under 10M → Above 500M). The vast majority of countries fall below **10 million**, while only 2 countries exceed **500 million**.
 
 ---
 
 ### 3️⃣ World Population Growth (1960–2024)
-![World Population Growth](https://raw.githubusercontent.com/siddhisharmaup85-web/PRODIGY_DS_01/main/screenshots/population_growth.png)
+![World Population Growth](https://raw.githubusercontent.com/siddhisharmaup85-web/PRODIGY_DS_01/main/screenshots/Chart4_sum_of_population_by_year.png)
 
 > Line chart showing steady global population growth over six decades. The world crossed **8 billion** in 2022, with the steepest growth occurring between 1980 and 2010.
 
 ---
 
 ### 4️⃣ Population by Region
-![Population by Region](https://raw.githubusercontent.com/siddhisharmaup85-web/PRODIGY_DS_01/main/screenshots/population_region.png)
+![Population by Region](https://raw.githubusercontent.com/siddhisharmaup85-web/PRODIGY_DS_01/main/screenshots/Chart2_sum_of_population_by_region.png)
 
 > Regional breakdown of population. **South Asia** and **East Asia & Pacific** dominate, while regions like **North America** and **Middle East & North Africa** contribute comparatively smaller shares.
 
 ---
 
 ### 5️⃣ KPI Cards — Summary Metrics
-![KPI Cards](https://raw.githubusercontent.com/siddhisharmaup85-web/PRODIGY_DS_01/main/screenshots/kpi_cards.png)
+![KPI Cards](https://raw.githubusercontent.com/siddhisharmaup85-web/PRODIGY_DS_01/main/screenshots/KPI_CARDS.png)
 
 > At-a-glance summary cards showing:
 > - 🌍 Total World Population (dynamically updated by slicer)
@@ -112,11 +115,17 @@ The dataset contains **one row per country per year**, with columns for Country 
 ---
 
 ### 6️⃣ Interactive Year Slicer
-![Interactive Year Slicer](https://raw.githubusercontent.com/siddhisharmaup85-web/PRODIGY_DS_01/main/screenshots/slicer.png)
+![Interactive Year Slicer](https://raw.githubusercontent.com/siddhisharmaup85-web/PRODIGY_DS_01/main/screenshots/licer_Fitter_according_to_year.png)
 
 > A dynamic year-range slicer allows filtering the entire dashboard by any year or range from 1960–2024. All visuals update in real time when the slicer is adjusted.
 
 ---
+
+## 📊 Data Used
+![Data Used](https://raw.githubusercontent.com/siddhisharmaup85-web/PRODIGY_DS_01/main/screenshots/DATA_USED.png)
+
+---
+
 
 ## ⚙️ Detailed Working & How It Works
 

@@ -126,7 +126,6 @@ The dataset contains **one row per country per year**, with columns for Country 
 
 ---
 
-
 ## ⚙️ Detailed Working & How It Works
 
 ---

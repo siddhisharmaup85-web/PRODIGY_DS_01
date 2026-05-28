@@ -115,7 +115,7 @@ The dataset contains **one row per country per year**, with columns for Country 
 ---
 
 ### 6️⃣ Interactive Year Slicer
-![Interactive Year Slicer](https://raw.githubusercontent.com/siddhisharmaup85-web/PRODIGY_DS_01/main/screenshots/licer_Fitter_according_to_year.png)
+![Interactive Year Slicer](https://raw.githubusercontent.com/siddhisharmaup85-web/PRODIGY_DS_01/main/screenshots/Slicer_Fitter_according_to_year.png)
 
 > A dynamic year-range slicer allows filtering the entire dashboard by any year or range from 1960–2024. All visuals update in real time when the slicer is adjusted.
 
@@ -128,6 +128,9 @@ The dataset contains **one row per country per year**, with columns for Country 
 
 
 ## ⚙️ Detailed Working & How It Works
+
+---
+
 
 ### Step-by-Step Data Pipeline
 

@@ -410,12 +410,14 @@ PRODIGY_DS_01/
 ├── README.md                      # This file
 │
 └── screenshots/
-    ├── top10_population.png       # Top 10 most populous countries (2023)
-    ├── population_groups.png      # Histogram — countries by population bracket
-    ├── population_growth.png      # Line chart — world population 1960–2024
-    ├── population_region.png      # Regional population distribution
-    ├── kpi_cards.png              # KPI summary cards
-    └── slicer.png                 # Year range slicer
+    ├── Chart1_top_10_most_populous_countries_2023.png            # Top 10 most populous countries (2023)
+    ├── Chart3_count_of_country_name_by_population_group.png      # Histogram — countries by population bracket
+    ├── Chart4_sum_of_population_by_year.png                      # Line chart — world population 1960–2024
+    ├── Chart2_sum_of_population_by_region.png                    # Regional population distribution
+    ├── KPI_CARDS.png                                             # KPI summary cards
+    ├── OVERALL_DASHBOARD.png                                     # Overall View Of Dashboard
+    ├── DATA_USED.png                                             # Data used(Cleaned)
+    └── Slicer_Fitter_according_to_year.png                       # Year range slicer
 ```
 
 ---

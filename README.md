@@ -220,7 +220,133 @@ These measures respond dynamically to any slicer or filter applied on the dashbo
 - The Y-axis shows how many countries fall into each bracket.
 - Use the year slicer to see how countries shift between brackets over decades.
 
+
 ---
+ 
+## 🛠️ Data Cleaning & Transformation
+ 
+All data cleaning and transformation was performed inside **Power Query Editor** in Power BI Desktop before loading data into the model. Below is a detailed breakdown of every step applied.
+ 
+---
+ 
+### Step 1 — Import Raw CSV
+ 
+The raw World Bank CSV file has a wide format — **one column per year** (1960, 1961, … 2024) — which is not suitable for Power BI's column-based aggregations.
+ 
+```
+Raw Structure:
+| Country Name | Country Code | Indicator Name | Indicator Code | 1960 | 1961 | ... | 2024 |
+```
+ 
+---
+ 
+### Step 2 — Remove Unnecessary Columns
+ 
+The columns `Indicator Name` and `Indicator Code` carry the same value in every row (`SP.POP.TOTL`) and add no analytical value.
+ 
+```
+Removed: [Indicator Name], [Indicator Code]
+Kept: [Country Name], [Country Code], [1960] … [2024]
+```
+ 
+---
+ 
+### Step 3 — Unpivot Year Columns (Wide → Long Format)
+ 
+This is the most critical transformation. All year columns (1960–2024) are **unpivoted** into two new columns:
+ 
+```
+Before Unpivot:
+| Country Name | 1960       | 1961       | ... |
+| India        | 450000000  | 460000000  | ... |
+ 
+After Unpivot:
+| Country Name | Year | Population  |
+| India        | 1960 | 450000000   |
+| India        | 1961 | 460000000   |
+```
+ 
+**How to unpivot in Power Query:**
+> Select all year columns → Right-click → `Unpivot Columns`
+> Rename the auto-generated `Attribute` column → `Year`
+> Rename the auto-generated `Value` column → `Population`
+ 
+---
+ 
+### Step 4 — Fix Data Types
+ 
+After unpivoting, Power Query treats `Year` as text and `Population` as text. Both must be corrected:
+ 
+| Column | From | To | Reason |
+|---|---|---|---|
+| `Year` | Text | Whole Number | Enables time-axis sorting and slicer range |
+| `Population` | Text | Whole Number | Enables SUM aggregation in DAX |
+| `Country Name` | Text | Text (unchanged) | Already correct |
+| `Country Code` | Text | Text (unchanged) | Used as join key |
+ 
+---
+ 
+### Step 5 — Handle Null / Blank Values
+ 
+Some country-year combinations have **no population data** (blank cells in the original CSV). These are removed to prevent incorrect totals and aggregation errors.
+ 
+```
+Filter Applied: Keep rows where [Population] is not null and not blank
+```
+ 
+> ⚠️ This particularly affects data from the 1960s for newly formed nations and territories with incomplete historical records.
+ 
+---
+ 
+### Step 6 — Add Custom Column: Population Group
+ 
+A calculated column is added in Power Query using **IF/SWITCH logic** to bucket each row into a population category. This powers the histogram visual.
+ 
+```m
+// M Language (Power Query)
+= if [Population] < 10000000 then "Under 10M"
+  else if [Population] < 50000000 then "10M – 50M"
+  else if [Population] < 100000000 then "50M – 100M"
+  else if [Population] < 500000000 then "100M – 500M"
+  else "Above 500M"
+```
+ 
+| Group Label | Population Range |
+|---|---|
+| Under 10M | < 10,000,000 |
+| 10M – 50M | 10,000,000 – 49,999,999 |
+| 50M – 100M | 50,000,000 – 99,999,999 |
+| 100M – 500M | 100,000,000 – 499,999,999 |
+| Above 500M | ≥ 500,000,000 |
+ 
+---
+ 
+### Step 7 — Merge Region Metadata
+ 
+The World Bank CSV does not include a `Region` column. Region information is available in a **separate metadata CSV** (`Metadata_Country.csv`) also provided by the World Bank.
+ 
+```
+Merge Type: Left Join
+Join Key: [Country Code]
+Added Column: [Region]
+```
+ 
+This enables the **"Population by Region"** bar chart visual.
+ 
+---
+ 
+### Step 8 — Rename & Clean Column Names
+ 
+All column names are cleaned for readability and consistency inside Power Query:
+ 
+| Original Name | Renamed To |
+|---|---|
+| `Country Name` | `Country` |
+| `Value` | `Population` |
+| `Attribute` | `Year` |
+ 
+---
+ 
 
 ## 🛠 Tools & Technologies Used
 

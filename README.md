@@ -465,6 +465,8 @@ File → Export → Export to PDF
 > 📄 **View the full static dashboard report as a PDF:**
 
 🔗 [**Open Full Report PDF →**](https://github.com/siddhisharmaup85-web/PRODIGY_DS_01/blob/4e9c8e45e7a7271c5456b6b1a6968108f93d66ad/PRODIGY_DS_01_Report.pdf)
+[![PDF Preview](https://raw.githubusercontent.com/siddhisharmaup85-web/PRODIGY_DS_01/main/screenshots/OVERALL_DASHBOARD.png)](https://github.com/siddhisharmaup85-web/PRODIGY_DS_01/blob/4e9c8e45e7a7271c5456b6b1a6968108f93d66ad/PRODIGY_DS_01_Report.pdf)
+
 
 *The PDF includes all 6 dashboard visuals exported at full resolution — useful for quick reference without opening Power BI Desktop.*
 

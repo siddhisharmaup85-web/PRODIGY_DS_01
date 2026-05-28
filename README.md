@@ -126,7 +126,7 @@ The dataset contains **one row per country per year**, with columns for Country 
 
 ---
 
-## ⚙️ Detailed Working & How It Works
+## 🤝 Detailed Working & How It Works
 
 ---
 
@@ -192,7 +192,7 @@ These measures respond dynamically to any slicer or filter applied on the dashbo
 
 ---
 
-## 🖱️ How to Use the Dashboard
+## 🤝 How to Use the Dashboard
 
 ### Basic Navigation
 
@@ -223,7 +223,7 @@ These measures respond dynamically to any slicer or filter applied on the dashbo
 
 ---
  
-## 🛠️ Data Cleaning & Transformation
+## 🤝 Data Cleaning & Transformation
  
 All data cleaning and transformation was performed inside **Power Query Editor** in Power BI Desktop before loading data into the model. Below is a detailed breakdown of every step applied.
  
@@ -491,7 +491,7 @@ Through this project, I developed hands-on proficiency in:
 
 ---
 
-## 👩‍💻 Author
+## 🤝 Author
 
 ### Siddhi Sharma
 **B.Tech CSE Student | Data Science Enthusiast**
